@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de privacidad · Euphory Ticket</title>
+  <meta name="description" content="Qué datos guarda Euphory Ticket, para qué, cuánto tiempo y cómo pedir que se borren.">
+  <meta name="theme-color" content="#a3e635">
+  <link rel="icon" href="img/icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <a class="marca" href="./"><img src="img/logo.png" alt="">Euphory Ticket</a>
+      <nav class="menu">
+        <a href="terminos.html">Términos</a>
+        <a href="https://discord.gg/Eh2tzxXeHK">Soporte</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="documento">
+    <div class="contenedor">
+      <div class="etiqueta">Legal</div>
+      <h1>Política de privacidad</h1>
+      <p class="fecha">Última actualización: 1 de noviembre de 2026</p>
+
+      <p class="resumen">Euphory Ticket guarda solo lo necesario para que funcionen los tickets de tu servidor y nunca vende ni comparte esos datos con fines publicitarios.</p>
+
+      <nav class="indice">
+        <strong>Contenido</strong>
+        <ol>
+          <li><a href="#quienes">Quiénes somos y a qué aplica</a></li>
+          <li><a href="#datos">Qué datos guarda el bot</a></li>
+          <li><a href="#no-guarda">Lo que no guarda</a></li>
+          <li><a href="#uso">Para qué se usan</a></li>
+          <li><a href="#ia">Inteligencia artificial y otros servicios</a></li>
+          <li><a href="#tiempo">Cuánto tiempo se guardan</a></li>
+          <li><a href="#acceso">Quién puede ver los datos</a></li>
+          <li><a href="#derechos">Tus derechos y contacto</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="quienes">1. Quiénes somos y a qué aplica</h2>
+      <p>Esta política explica qué datos guarda el bot de Discord <strong>Euphory Ticket</strong>, para qué y por cuánto tiempo. Aplica a todas las personas que usan el bot: dueños y staff de cada servidor, y jugadores o usuarios que abren tickets.</p>
+      <ul>
+        <li><strong>Responsable:</strong> Gabriel Jesus Montalvo Vera (GJ Euphory), desarrollador de Euphory Ticket.</li>
+        <li><strong>Contacto:</strong> GJ Euphory (<strong>@gjeuphory21</strong>) en Discord, o el <a href="https://discord.gg/Eh2tzxXeHK">servidor de soporte</a>.</li>
+        <li><strong>Comunidades:</strong> cada servidor (o par de servidores vinculados) que activa el bot forma una <em>comunidad</em>. Sus Dueños deciden cómo se usa el bot allí: qué canales reciben los registros, si se usa la IA y quién ve cada ticket.</li>
+      </ul>
+
+      <h2 id="datos">2. Qué datos guarda el bot</h2>
+      <p>El bot guarda IDs de Discord, nombres visibles y lo que la gente escribe en los formularios de los tickets. No guarda contraseñas, correos ni datos de pago.</p>
+      <div class="tabla">
+        <table>
+          <thead><tr><th>Dato</th><th>Qué incluye</th><th>De quién</th></tr></thead>
+          <tbody>
+            <tr><td>Configuración de la comunidad</td><td>IDs del servidor, canales y roles; rangos, categorías, formularios, textos, colores y ajustes de <code>/setup</code></td><td>Dueños y staff</td></tr>
+            <tr><td>Encargados y dueños</td><td>IDs de Discord de quien creó la comunidad y de sus encargados</td><td>Dueños</td></tr>
+            <tr><td>Tickets abiertos</td><td>Número, categoría, ID, nombre y avatar de quien lo abrió; respuestas del formulario; quién lo reclamó y quién escribió</td><td>Jugadores y staff</td></tr>
+            <tr><td>Historial de tickets cerrados</td><td>Lo mismo que un ticket abierto, más participantes, número de mensajes, eventos (reclamos, cierres), valoración y comentario, y el resumen de la IA</td><td>Jugadores y staff</td></tr>
+            <tr><td>Datos recordados del jugador</td><td>Plataforma, dispositivo, versión y nick de Minecraft, y la fecha de su último ticket</td><td>Jugadores</td></tr>
+            <tr><td>Cola de espera</td><td>ID y nombre de quien espera, categoría y hora</td><td>Jugadores</td></tr>
+            <tr><td>Lista negra</td><td>IDs bloqueados por la comunidad, quién los agregó y cuándo</td><td>Jugadores y staff</td></tr>
+            <tr><td>Historial de cambios de <code>/setup</code></td><td>Los últimos 200 cambios: quién, cuándo y qué cambió</td><td>Dueños y staff</td></tr>
+            <tr><td>Claves de IA de la comunidad</td><td>Las claves que los Dueños pegan en <code>/setup</code></td><td>Dueños</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Todo esto se guarda en archivos en el servidor (hosting) donde funciona el bot, separado por comunidad.</p>
+
+      <h2 id="no-guarda">3. Lo que no guarda y dónde quedan las conversaciones</h2>
+      <p>Las conversaciones completas de los tickets no se guardan en el bot: al cerrar un ticket se envían a Discord y el bot las borra de su memoria.</p>
+      <ul>
+        <li><strong>Transcripciones:</strong> al cerrar, el bot lee los mensajes del canal, arma una transcripción (archivo HTML con mensajes e imágenes) y la publica en el canal de registros que eligió la comunidad. También envía una copia por mensaje privado al staff que cerró y, si la comunidad lo activó, al jugador. Después borra el canal del ticket.</li>
+        <li><strong>Archivos e imágenes:</strong> se descargan solo un momento para volver a subirlos al registro. No quedan guardados en el hosting.</li>
+        <li><strong>Mensajes fuera de los tickets:</strong> el bot no lee ni guarda mensajes de otros canales.</li>
+        <li><strong>Datos sensibles:</strong> el bot no pide ni guarda contraseñas, correos, números de teléfono, direcciones ni datos de pago.</li>
+      </ul>
+      <p>Los registros publicados en Discord pertenecen al servidor donde se publicaron. Sus Dueños pueden borrarlos cuando quieran.</p>
+
+      <h2 id="uso">4. Para qué se usan</h2>
+      <p>Los datos se usan solo para dar el servicio de tickets dentro de cada comunidad:</p>
+      <ul>
+        <li>Crear el canal privado de cada ticket y dar acceso a las personas correctas.</li>
+        <li>Mostrar el formulario y las respuestas al staff.</li>
+        <li>Recordar la plataforma y el nick del jugador para que no los escriba en cada ticket.</li>
+        <li>Hacer cumplir las reglas de la comunidad: cola, límite de tickets, espera entre tickets, horario y lista negra.</li>
+        <li>Generar el registro, la transcripción, la valoración y las estadísticas del staff.</li>
+        <li>Avisar por privado: turno en la cola, valoración, copia del registro y avisos de inactividad a los Dueños.</li>
+      </ul>
+      <h3>Permisos especiales de Discord</h3>
+      <ul>
+        <li><strong>Contenido de mensajes (Message Content):</strong> solo dentro de los canales de tickets. Sirve para armar la transcripción y el resumen con IA al cerrar el ticket. Los mensajes de otros canales se ignoran y no se guardan.</li>
+        <li><strong>Miembros del servidor (Server Members):</strong> para saber quién tiene cada rol del staff, liberar los tickets de alguien del staff que sale del servidor y avisar a los Dueños si la comunidad está inactiva.</li>
+      </ul>
+
+      <h2 id="ia">5. Inteligencia artificial y otros servicios</h2>
+      <p>Cada comunidad decide si usa la IA. Si está activada, al cerrar un ticket el bot envía el texto de la conversación (nombres visibles y mensajes, sin archivos) a uno de estos proveedores para escribir un resumen y evaluar la atención del staff: <strong>Groq, Cerebras, OpenRouter, Google Gemini o Mistral</strong>.</p>
+      <p>El bot prueba uno tras otro hasta que alguno responda. Cada proveedor trata los datos según su propia política de privacidad. <strong>Importante:</strong> los planes gratuitos de Google Gemini y Mistral pueden usar el texto recibido para mejorar sus modelos. Los Dueños de cada comunidad pueden apagar la IA por completo o elegir solo los proveedores que prefieran en <code>/setup</code>.</p>
+      <p>Además:</p>
+      <ul>
+        <li><strong>Discord</strong> guarda los mensajes, canales y archivos de los tickets, como cualquier otro mensaje de Discord.</li>
+        <li><strong>El servicio de alojamiento</strong> donde funciona el bot guarda los archivos de datos descritos arriba.</li>
+      </ul>
+      <p>No se venden ni se alquilan datos a nadie, y no se usan para publicidad.</p>
+
+      <h2 id="tiempo">6. Cuánto tiempo se guardan</h2>
+      <div class="tabla">
+        <table>
+          <thead><tr><th>Dato</th><th>Cuánto tiempo</th></tr></thead>
+          <tbody>
+            <tr><td>Tickets abiertos</td><td>Hasta que se cierran</td></tr>
+            <tr><td>Historial de tickets cerrados</td><td>90 días en uso; después pasa a archivos mensuales que se borran a los 5 años como máximo</td></tr>
+            <tr><td>Datos del jugador (plataforma, nick, versión)</td><td>Mientras exista la comunidad</td></tr>
+            <tr><td>Historial de cambios de <code>/setup</code></td><td>Los últimos 200 cambios</td></tr>
+            <tr><td>Lista negra</td><td>Hasta que el staff quita a la persona</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Cuándo se borra todo</h3>
+      <ul>
+        <li><strong>Si los Dueños eliminan la comunidad</strong> desde <code>/setup</code>, sus datos se borran en ese momento.</li>
+        <li><strong>Si el bot sale de los servidores</strong> de una comunidad, sus datos se borran 30 días después. Ese margen existe por si el bot fue expulsado por error.</li>
+        <li><strong>Si un servidor nunca activa el bot</strong>, el bot sale solo a los 7 días.</li>
+      </ul>
+      <p>Los mensajes que el bot publicó en Discord (registros, transcripciones) no se borran con esto: quedan en esos canales hasta que alguien del servidor los borre.</p>
+
+      <h2 id="acceso">7. Quién puede ver los datos</h2>
+      <ul>
+        <li><strong>El staff de cada comunidad</strong> ve los tickets y el historial de su propia comunidad, según los permisos que los Dueños dieron a cada rango.</li>
+        <li><strong>Los Dueños de la comunidad</strong> ven la configuración, el historial de cambios y pueden descargar copias de la configuración (sin las claves de IA).</li>
+        <li><strong>El desarrollador</strong> solo accede a los datos cuando hace falta para dar soporte, corregir un error o cumplir la ley.</li>
+      </ul>
+      <p>Una comunidad nunca ve los datos de otra.</p>
+      <h3>Seguridad</h3>
+      <p>Los datos se guardan en el servidor donde funciona el bot, sin acceso público. Las claves de IA nunca se muestran completas en Discord ni se incluyen en las copias de seguridad. Ningún sistema es 100 % seguro: si ocurre un problema que afecte tus datos, se avisará en el servidor de soporte.</p>
+      <h3>Menores de edad</h3>
+      <p>Discord exige tener al menos 13 años (o la edad mínima de tu país). Euphory Ticket sigue esa misma regla y no busca recoger datos de menores de esa edad. Si crees que se guardaron datos de alguien menor, escríbenos y los borraremos.</p>
+
+      <h2 id="derechos">8. Tus derechos y contacto</h2>
+      <p>Puedes pedir:</p>
+      <ul>
+        <li><strong>Ver</strong> qué datos tuyos guarda el bot.</li>
+        <li><strong>Corregir</strong> datos equivocados (por ejemplo, tu nick).</li>
+        <li><strong>Borrar</strong> tus datos personales del historial y de los datos de jugador.</li>
+      </ul>
+      <p>Para pedirlo, escribe en el servidor de soporte o al contacto del desarrollador. Si se trata de una comunidad concreta, también puedes pedirlo a sus Dueños. Responderemos en un plazo máximo de 30 días.</p>
+      <p>Algunos datos pueden mantenerse si la comunidad los necesita por seguridad, por ejemplo una entrada en su lista negra. Los mensajes ya publicados en Discord dependen de cada servidor y de Discord.</p>
+      <h3>Cambios en esta política</h3>
+      <p>Si esta política cambia, se actualizará la fecha de arriba y se avisará en el servidor de soporte. Seguir usando el bot después del aviso significa que aceptas la nueva versión.</p>
+      <h3>Contacto</h3>
+      <ul>
+        <li>Desarrollador: Gabriel Jesus Montalvo Vera (GJ Euphory)</li>
+        <li>Discord: GJ Euphory (<strong>@gjeuphory21</strong>)</li>
+        <li>Servidor de soporte: <a href="https://discord.gg/Eh2tzxXeHK">https://discord.gg/Eh2tzxXeHK</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <span>© 2026 Euphory Ticket · Creado por GJ Euphory</span>
+      <nav>
+        <a href="./">Inicio</a>
+        <a href="terminos.html">Términos</a>
+        <a href="https://discord.gg/Eh2tzxXeHK">Soporte</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

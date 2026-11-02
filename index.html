@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Euphory Ticket · Bot de tickets para Discord</title>
+  <meta name="description" content="Bot de tickets en español para comunidades de Discord y servidores de Minecraft: formularios propios, rangos de staff, reclamos, cola, valoraciones, transcripciones y resúmenes con IA.">
+  <meta property="og:title" content="Euphory Ticket">
+  <meta property="og:description" content="Bot de tickets en español para Discord y Minecraft. Todo se configura con /setup.">
+  <meta property="og:image" content="https://gj-euphory-21.github.io/euphory-ticket/img/icono.png">
+  <meta name="theme-color" content="#a3e635">
+  <link rel="icon" href="img/icono.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor">
+      <a class="marca" href="./"><img src="img/logo.png" alt="">Euphory Ticket</a>
+      <nav class="menu">
+        <a class="opcional" href="#funciones">Funciones</a>
+        <a class="opcional" href="#empezar">Empezar</a>
+        <a href="https://discord.gg/Eh2tzxXeHK">Soporte</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="portada">
+      <div class="contenedor">
+        <div>
+          <div class="etiqueta">Bot de tickets para Discord</div>
+          <h1>Soporte ordenado para tu <span>comunidad</span></h1>
+          <p class="lema">Euphory Ticket crea un canal privado por cada consulta, con formularios a tu medida, rangos de staff y registros completos. Pensado para servidores de Minecraft (Java y Bedrock) y para cualquier comunidad.</p>
+          <div class="acciones">
+            <a class="boton principal" href="https://discord.gg/Eh2tzxXeHK" data-invitar>Añadir a Discord</a>
+            <a class="boton" href="https://discord.gg/Eh2tzxXeHK">Servidor de soporte</a>
+          </div>
+        </div>
+        <img class="captura" src="img/panel.png" alt="Panel de tickets de Euphory Ticket con categorías como Dudas, Reporte de Bug y Apelación" width="700" height="667">
+      </div>
+    </section>
+
+    <section id="funciones" class="alterna">
+      <div class="contenedor">
+        <h2>Todo lo que necesita tu staff</h2>
+        <p class="intro">Se configura con botones y menús desde <code>/setup</code>, con ayuda en cada opción. Sin comandos difíciles.</p>
+        <div class="rejilla">
+          <div class="funcion">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3>Categorías propias</h3>
+            <p>Hasta 15 categorías: dudas, reportes, apelaciones, compras o las que inventes, cada una con su emoji y su texto.</p>
+          </div>
+          <div class="funcion">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></div>
+            <h3>Formularios a tu medida</h3>
+            <p>Preguntas de texto, opciones o archivos. Estilo general o especial para Minecraft, con nick y plataforma.</p>
+          </div>
+          <div class="funcion">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Rangos y reclamos</h3>
+            <p>Decide qué rango ve cada categoría. Cada ticket tiene un responsable, así nunca responden dos a la vez.</p>
+          </div>
+          <div class="funcion">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+            <h3>Reglas para abrir</h3>
+            <p>Cola de espera, límite de tickets, horario de atención, espera entre tickets y lista negra.</p>
+          </div>
+          <div class="funcion">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div>
+            <h3>Registros y transcripciones</h3>
+            <p>Al cerrar, el bot publica el registro con la conversación completa, las imágenes y la valoración del usuario.</p>
+          </div>
+          <div class="funcion">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
+            <h3>Resúmenes con IA</h3>
+            <p>Opcional: un resumen de cada ticket y una evaluación de la atención del staff. Puedes apagarla cuando quieras.</p>
+          </div>
+          <div class="funcion">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <h3>Estadísticas del staff</h3>
+            <p>Tickets atendidos por cada miembro del staff, valoraciones y duración promedio, por semana, mes o año.</p>
+          </div>
+          <div class="funcion">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="9" height="7" rx="1.5"/><rect x="13" y="13" width="9" height="7" rx="1.5"/><path d="M6.5 11v4.5H13M17.5 13V8.5H11"/></svg></div>
+            <h3>Servidor secundario</h3>
+            <p>Vincula un segundo servidor de Discord y recibe allí los registros, sin llenar tu servidor principal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor dos">
+        <div>
+          <h2>Un registro de cada ticket</h2>
+          <p class="intro">Cuando un ticket se cierra, el staff recibe un resumen claro: quién lo abrió, quién lo atendió, cuánto tardó, la valoración y la transcripción completa para revisarla cuando haga falta.</p>
+        </div>
+        <img class="captura" src="img/registro.png" alt="Registro de un ticket cerrado con resumen de la IA y valoración" width="700" height="313" loading="lazy">
+      </div>
+    </section>
+
+    <section id="empezar" class="alterna">
+      <div class="contenedor dos">
+        <div>
+          <h2>Listo en 3 pasos</h2>
+          <p class="intro">El asistente de <code>/setup</code> te guía paso a paso: rangos, categorías, canal de registros y panel.</p>
+          <ol class="pasos">
+            <li><strong>Añade el bot</strong><span>Con el botón «Añadir a Discord». Necesitas el permiso Gestionar servidor.</span></li>
+            <li><strong>Escribe /setup</strong><span>Sigue el asistente. Puedes cambiar todo después.</span></li>
+            <li><strong>Publica el panel</strong><span>Tus miembros ya pueden abrir tickets.</span></li>
+          </ol>
+        </div>
+        <div>
+          <h3>Comandos</h3>
+          <table class="comandos">
+            <tr><td><code>/setup</code></td><td>Configura el sistema de tickets (solo Dueños)</td></tr>
+            <tr><td><code>/panel</code></td><td>Publica el panel de tickets en el canal</td></tr>
+            <tr><td><code>/estadisticas</code></td><td>Tickets, valoraciones y staff</td></tr>
+            <tr><td><code>/cerrar</code></td><td>Cierra el ticket actual</td></tr>
+            <tr><td><code>/agregar</code> <code>/quitar</code></td><td>Agrega o quita a una persona del ticket</td></tr>
+            <tr><td><code>/soltar</code></td><td>Suelta el reclamo del ticket</td></tr>
+            <tr><td><code>/vincular</code></td><td>Une otro servidor a tu comunidad</td></tr>
+            <tr><td><code>/info</code></td><td>Información del bot y soporte</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="llamada">
+      <div class="contenedor">
+        <h2>¿Listo para ordenar tu soporte?</h2>
+        <p class="intro" style="margin-inline:auto">Gratis y en español. Si tienes dudas, pásate por el servidor de soporte.</p>
+        <div class="acciones">
+          <a class="boton principal" href="https://discord.gg/Eh2tzxXeHK" data-invitar>Añadir a Discord</a>
+          <a class="boton" href="https://discord.gg/Eh2tzxXeHK">Servidor de soporte</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <span>© 2026 Euphory Ticket · Creado por GJ Euphory</span>
+      <nav>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="terminos.html">Términos</a>
+        <a href="https://discord.gg/Eh2tzxXeHK">Soporte</a>
+      </nav>
+    </div>
+  </footer>
+  <script>
+    // ID de tu bot (Developer Portal → General Information → Application ID).
+    // Mientras esté vacío, «Añadir a Discord» lleva al servidor de soporte.
+    const BOT_ID = '1565609002463793242';
+    if (/^\d{17,20}$/.test(BOT_ID)) {
+      const enlace = `https://discord.com/oauth2/authorize?client_id=${BOT_ID}&permissions=309506206736&scope=bot%20applications.commands`;
+      document.querySelectorAll('[data-invitar]').forEach((a) => (a.href = enlace));
+    }
+  </script>
+</body>
+</html>
