@@ -211,6 +211,9 @@ footer a:hover { color: var(--texto); }
   background: linear-gradient(180deg, rgba(11, 11, 13, 0), var(--fondo) 92%); pointer-events: none; }
 @media (max-width: 860px) { .marco { margin: 0 auto; } }
 @media (max-width: 480px) { .menu > a { display: none; } }
+.rejilla { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .rejilla { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .rejilla { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -239,6 +242,7 @@ footer a:hover { color: var(--texto); }
           <li><a href="#use">Allowed and prohibited use</a></li>
           <li><a href="#ai">AI, your own keys and other services</a></li>
           <li><a href="#availability">Availability, changes and suspension</a></li>
+          <li><a href="#trademarks">Trademarks and affiliation</a></li>
           <li><a href="#liability">Liability, ownership and contact</a></li>
         </ol>
       </nav>
@@ -259,6 +263,7 @@ footer a:hover { color: var(--texto); }
         <li>Decide the configuration: who is staff, what the forms ask, whether AI is used and where logs are posted.</li>
         <li>Are responsible for how their staff uses the bot and for what is written in their tickets.</li>
         <li>Must let their members know that tickets are logged (for example, in the server rules).</li>
+        <li>Must also let them know that ticket data is processed outside Peru (on the bot's hosting, on Discord and, if enabled, by the AI providers), as explained in the <a href="privacy.html">Privacy Policy</a>.</li>
         <li>Must not ask for unnecessary sensitive data in forms, such as passwords, ID documents or bank details.</li>
         <li>Must keep their own AI keys safe if they add them.</li>
       </ul>
@@ -285,7 +290,7 @@ footer a:hover { color: var(--texto); }
 
       <h2 id="availability">5. Availability, changes and suspension</h2>
       <ul>
-        <li>The bot is free and provided “as is”. We try to keep it online at all times, but there may be outages, maintenance or bugs.</li>
+        <li>The bot is free: all of its features are available without paying and there are no paid plans. It is provided “as is”. We try to keep it online at all times, but there may be outages, maintenance or bugs.</li>
         <li>Features may change, improve or be removed over time. Important changes are announced on the support server.</li>
         <li>There may be usage limits to protect the service, for example a maximum number of servers or categories.</li>
         <li>The developer may <strong>suspend or remove the bot</strong> from a community that breaks these terms or Discord's rules, with or without prior notice depending on the severity.</li>
@@ -293,7 +298,15 @@ footer a:hover { color: var(--texto); }
       <h3>Stopping using the bot</h3>
       <p>Owners can delete their community from <code>/setup</code> (its data is deleted immediately) or simply remove the bot (its data is deleted after 30 days). If the bot were ever discontinued entirely, it will be announced in advance on the support server whenever possible.</p>
 
-      <h2 id="liability">6. Liability, ownership and contact</h2>
+      <h2 id="trademarks">6. Trademarks and affiliation</h2>
+      <p>Euphory Ticket is an independent project. It is <strong>not affiliated with, sponsored by or endorsed by</strong> Mojang Studios, Microsoft or Discord Inc.</p>
+      <ul>
+        <li>Minecraft is a trademark of Mojang Studios and Microsoft. Java, Bedrock and the names of launchers or mods (such as Pojav, Fabric, Forge or NeoForge) belong to their respective owners.</li>
+        <li>Discord is a trademark of Discord Inc.</li>
+      </ul>
+      <p>These names are used only to describe which games and platforms the bot works with.</p>
+
+      <h2 id="liability">7. Liability, ownership and contact</h2>
       <h3>No warranties</h3>
       <p>To the extent permitted by law, the bot is provided without warranties of any kind. The developer is not responsible for:</p>
       <ul>
@@ -308,7 +321,6 @@ footer a:hover { color: var(--texto); }
       <p>These terms are governed by the laws of the Republic of Peru.</p>
       <h3>Changes</h3>
       <p>If these terms change, the date above will be updated and the change will be announced on the support server. Continuing to use the bot after the announcement means you accept the new version.</p>
-      <p>These terms are also available <a href="terminos.html">in Spanish</a>. If the versions differ, the Spanish version prevails.</p>
       <h3>Languages</h3>
       <p>This document is also available in Spanish. If the versions differ in any way, the Spanish version prevails.</p>
       <h3>Contact</h3>

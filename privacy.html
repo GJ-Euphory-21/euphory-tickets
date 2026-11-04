@@ -211,6 +211,9 @@ footer a:hover { color: var(--texto); }
   background: linear-gradient(180deg, rgba(11, 11, 13, 0), var(--fondo) 92%); pointer-events: none; }
 @media (max-width: 860px) { .marco { margin: 0 auto; } }
 @media (max-width: 480px) { .menu > a { display: none; } }
+.rejilla { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .rejilla { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .rejilla { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -240,7 +243,7 @@ footer a:hover { color: var(--texto); }
           <li><a href="#data">What data the bot stores</a></li>
           <li><a href="#not-stored">What it does not store</a></li>
           <li><a href="#use">How the data is used</a></li>
-          <li><a href="#ai">Artificial intelligence and other services</a></li>
+          <li><a href="#ai">Artificial intelligence, other services and where data is kept</a></li>
           <li><a href="#retention">How long data is kept</a></li>
           <li><a href="#access">Who can see the data</a></li>
           <li><a href="#rights">Your rights and contact</a></li>
@@ -261,11 +264,12 @@ footer a:hover { color: var(--texto); }
         <table>
           <thead><tr><th>Data</th><th>What it includes</th><th>About whom</th></tr></thead>
           <tbody>
-            <tr><td>Community settings</td><td>Server, channel and role IDs; ranks, categories, forms, texts, colors and <code>/setup</code> options</td><td>Owners and staff</td></tr>
+            <tr><td>Community settings</td><td>Server, channel and role IDs; ranks, categories, forms, styles, texts in each language (including those changed with the text file), custom languages, colors and <code>/setup</code> options</td><td>Owners and staff</td></tr>
             <tr><td>Owners and managers</td><td>Discord IDs of the person who created the community and its managers</td><td>Owners</td></tr>
-            <tr><td>Open tickets</td><td>Number, category, ID, name and avatar of the person who opened it; form answers; who claimed it and who wrote in it</td><td>Players and staff</td></tr>
+            <tr><td>Open tickets</td><td>Number, category, ID, name and avatar of the person who opened it; ticket language; form answers; who claimed it and who wrote in it</td><td>Players and staff</td></tr>
             <tr><td>Closed ticket history</td><td>Same as an open ticket, plus participants, message count, events (claims, closing), rating and comment, and the AI summary</td><td>Players and staff</td></tr>
-            <tr><td>Remembered player details</td><td>Minecraft platform, device, version and nickname, and the date of their last ticket</td><td>Players</td></tr>
+            <tr><td>Unfinished forms</td><td>What someone has answered so far in a form they have not sent yet, so it is not lost if the bot restarts</td><td>Players</td></tr>
+            <tr><td>Remembered details for each person</td><td>Minecraft platform, device, version and nickname, their explanation of how they connect if they chose “Other”, the date of their last ticket and, for staff, the language they use <code>/setup</code> in</td><td>Players and staff</td></tr>
             <tr><td>Waiting queue</td><td>ID and name of the person waiting, category and time</td><td>Players</td></tr>
             <tr><td>Blacklist</td><td>IDs blocked by the community, who added them and when</td><td>Players and staff</td></tr>
             <tr><td><code>/setup</code> change history</td><td>The last 200 changes: who, when and what changed</td><td>Owners and staff</td></tr>
@@ -273,7 +277,7 @@ footer a:hover { color: var(--texto); }
           </tbody>
         </table>
       </div>
-      <p>All of this is stored in files on the server (hosting) where the bot runs, kept separate for each community.</p>
+      <p>All of this is stored in files on the server (hosting) where the bot runs, kept separate for each community. The files are not encrypted: they are protected by the fact that only the developer and the hosting provider can access that server (see section 7).</p>
 
       <h2 id="not-stored">3. What it does not store, and where conversations go</h2>
       <p>Full ticket conversations are not stored by the bot: when a ticket closes they are sent to Discord and the bot removes them from its memory.</p>
@@ -301,7 +305,7 @@ footer a:hover { color: var(--texto); }
         <li><strong>Server Members:</strong> to know who has each staff role, release the tickets of a staff member who leaves the server, and notify Owners when the community is inactive.</li>
       </ul>
 
-      <h2 id="ai">5. Artificial intelligence and other services</h2>
+      <h2 id="ai">5. Artificial intelligence, other services and where data is kept</h2>
       <p>Each community decides whether to use AI. If it is enabled, when a ticket closes the bot sends the conversation text (display names and messages, no files) to one of these providers to write a summary and review the staff's handling: <strong>Groq, Cerebras, OpenRouter, Google Gemini or Mistral</strong>.</p>
       <p>The bot tries them one after another until one answers. Each provider handles the data under its own privacy policy. <strong>Important:</strong> the free plans of Google Gemini and Mistral may use the text they receive to improve their models. Each community's Owners can turn AI off completely or choose only the providers they prefer in <code>/setup</code>.</p>
       <p>In addition:</p>
@@ -309,6 +313,8 @@ footer a:hover { color: var(--texto); }
         <li><strong>Discord</strong> stores the ticket messages, channels and files, like any other Discord message.</li>
         <li><strong>The hosting service</strong> where the bot runs stores the data files described above.</li>
       </ul>
+      <h3>Transfer outside Peru</h3>
+      <p>The developer is based in Peru, but the bot's hosting is in another country (currently the United States), and Discord and the AI providers also process data outside Peru. This means the data described in this policy leaves the country you live in. By using the bot, you agree to this transfer. If you do not agree, do not open tickets with Euphory Ticket and ask your community's staff for another way to contact them.</p>
       <p>No data is sold or rented to anyone, and it is not used for advertising.</p>
 
       <h2 id="retention">6. How long data is kept</h2>
@@ -316,9 +322,10 @@ footer a:hover { color: var(--texto); }
         <table>
           <thead><tr><th>Data</th><th>How long</th></tr></thead>
           <tbody>
+            <tr><td>Unfinished forms</td><td>30 minutes at most; if they are not sent, they are deleted</td></tr>
             <tr><td>Open tickets</td><td>Until they are closed</td></tr>
             <tr><td>Closed ticket history</td><td>90 days in active use; then moved to monthly archives that are deleted after 5 years at most</td></tr>
-            <tr><td>Player details (platform, nickname, version)</td><td>As long as the community exists</td></tr>
+            <tr><td>Remembered details for each person (platform, nickname, version, language)</td><td>As long as the community exists</td></tr>
             <tr><td><code>/setup</code> change history</td><td>The last 200 changes</td></tr>
             <tr><td>Blacklist</td><td>Until the staff removes the person</td></tr>
           </tbody>
@@ -336,11 +343,12 @@ footer a:hover { color: var(--texto); }
       <ul>
         <li><strong>Each community's staff</strong> sees the tickets and history of their own community, according to the permissions the Owners gave each rank.</li>
         <li><strong>The community's Owners</strong> see the settings and change history, and can download copies of the settings (without the AI keys).</li>
-        <li><strong>The developer</strong> only accesses data when needed to provide support, fix a bug or comply with the law.</li>
+        <li><strong>The developer</strong> manages the hosting, so they are <strong>technically able to see</strong> the data files in section 2. The bot can also read the channels it has permission for, including log channels. The developer commits to accessing this data only when needed to provide support, fix a bug, investigate abuse or comply with the law; never to read a community's conversations out of curiosity or to share them.</li>
+        <li><strong>The hosting provider</strong> may access the server's files under its own policy, as with any cloud service.</li>
       </ul>
       <p>A community never sees another community's data.</p>
       <h3>Security</h3>
-      <p>Data is stored on the server where the bot runs, with no public access. AI keys are never shown in full on Discord and are never included in backups. No system is 100% secure: if a problem affects your data, it will be announced on the support server.</p>
+      <p>Data is stored on the server where the bot runs, with no public access. Access to the hosting and the bot's key (token) is protected with a password and two-step verification, and is never shared. AI keys are never shown in full on Discord and are never included in backups. No system is 100% secure: if a problem affects your data, it will be announced on the support server.</p>
       <h3>Minors</h3>
       <p>Discord requires users to be at least 13 years old (or the minimum age in your country). Euphory Ticket follows the same rule and does not knowingly collect data from anyone under that age. If you believe data from a minor was stored, contact us and we will delete it.</p>
 
@@ -355,7 +363,6 @@ footer a:hover { color: var(--texto); }
       <p>Some data may be kept if the community needs it for safety, for example a blacklist entry. Messages already posted on Discord depend on each server and on Discord.</p>
       <h3>Changes to this policy</h3>
       <p>If this policy changes, the date above will be updated and the change will be announced on the support server. Continuing to use the bot after the announcement means you accept the new version.</p>
-      <p>This policy is also available <a href="privacidad.html">in Spanish</a>. If the versions differ, the Spanish version prevails.</p>
       <h3>Languages</h3>
       <p>This document is also available in Spanish. If the versions differ in any way, the Spanish version prevails.</p>
       <h3>Contact</h3>

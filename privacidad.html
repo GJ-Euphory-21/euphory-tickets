@@ -211,6 +211,9 @@ footer a:hover { color: var(--texto); }
   background: linear-gradient(180deg, rgba(11, 11, 13, 0), var(--fondo) 92%); pointer-events: none; }
 @media (max-width: 860px) { .marco { margin: 0 auto; } }
 @media (max-width: 480px) { .menu > a { display: none; } }
+.rejilla { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .rejilla { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .rejilla { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -240,7 +243,7 @@ footer a:hover { color: var(--texto); }
           <li><a href="#datos">Qué datos guarda el bot</a></li>
           <li><a href="#no-guarda">Lo que no guarda</a></li>
           <li><a href="#uso">Para qué se usan</a></li>
-          <li><a href="#ia">Inteligencia artificial y otros servicios</a></li>
+          <li><a href="#ia">Inteligencia artificial, otros servicios y dónde están los datos</a></li>
           <li><a href="#tiempo">Cuánto tiempo se guardan</a></li>
           <li><a href="#acceso">Quién puede ver los datos</a></li>
           <li><a href="#derechos">Tus derechos y contacto</a></li>
@@ -261,11 +264,12 @@ footer a:hover { color: var(--texto); }
         <table>
           <thead><tr><th>Dato</th><th>Qué incluye</th><th>De quién</th></tr></thead>
           <tbody>
-            <tr><td>Configuración de la comunidad</td><td>IDs del servidor, canales y roles; rangos, categorías, formularios, textos, colores y ajustes de <code>/setup</code></td><td>Dueños y staff</td></tr>
+            <tr><td>Configuración de la comunidad</td><td>IDs del servidor, canales y roles; rangos, categorías, formularios, estilos, textos en cada idioma (incluidos los cambiados con el archivo de textos), idiomas propios, colores y ajustes de <code>/setup</code></td><td>Dueños y staff</td></tr>
             <tr><td>Encargados y dueños</td><td>IDs de Discord de quien creó la comunidad y de sus encargados</td><td>Dueños</td></tr>
-            <tr><td>Tickets abiertos</td><td>Número, categoría, ID, nombre y avatar de quien lo abrió; respuestas del formulario; quién lo reclamó y quién escribió</td><td>Jugadores y staff</td></tr>
+            <tr><td>Tickets abiertos</td><td>Número, categoría, ID, nombre y avatar de quien lo abrió; idioma del ticket; respuestas del formulario; quién lo reclamó y quién escribió</td><td>Jugadores y staff</td></tr>
             <tr><td>Historial de tickets cerrados</td><td>Lo mismo que un ticket abierto, más participantes, número de mensajes, eventos (reclamos, cierres), valoración y comentario, y el resumen de la IA</td><td>Jugadores y staff</td></tr>
-            <tr><td>Datos recordados del jugador</td><td>Plataforma, dispositivo, versión y nick de Minecraft, y la fecha de su último ticket</td><td>Jugadores</td></tr>
+            <tr><td>Formularios a medio llenar</td><td>Lo que alguien lleva respondido en un formulario que todavía no envió, para no perderlo si el bot se reinicia</td><td>Jugadores</td></tr>
+            <tr><td>Datos recordados de cada persona</td><td>Plataforma, dispositivo, versión y nick de Minecraft, la explicación de cómo se conecta si eligió «Otros», la fecha de su último ticket y, para el staff, el idioma en que usa <code>/setup</code></td><td>Jugadores y staff</td></tr>
             <tr><td>Cola de espera</td><td>ID y nombre de quien espera, categoría y hora</td><td>Jugadores</td></tr>
             <tr><td>Lista negra</td><td>IDs bloqueados por la comunidad, quién los agregó y cuándo</td><td>Jugadores y staff</td></tr>
             <tr><td>Historial de cambios de <code>/setup</code></td><td>Los últimos 200 cambios: quién, cuándo y qué cambió</td><td>Dueños y staff</td></tr>
@@ -273,7 +277,7 @@ footer a:hover { color: var(--texto); }
           </tbody>
         </table>
       </div>
-      <p>Todo esto se guarda en archivos en el servidor (hosting) donde funciona el bot, separado por comunidad.</p>
+      <p>Todo esto se guarda en archivos en el servidor (hosting) donde funciona el bot, separado por comunidad. Los archivos no están cifrados: los protege que solo el desarrollador y el proveedor del hosting pueden entrar a ese servidor (ver la sección 7).</p>
 
       <h2 id="no-guarda">3. Lo que no guarda y dónde quedan las conversaciones</h2>
       <p>Las conversaciones completas de los tickets no se guardan en el bot: al cerrar un ticket se envían a Discord y el bot las borra de su memoria.</p>
@@ -301,7 +305,7 @@ footer a:hover { color: var(--texto); }
         <li><strong>Miembros del servidor (Server Members):</strong> para saber quién tiene cada rol del staff, liberar los tickets de alguien del staff que sale del servidor y avisar a los Dueños si la comunidad está inactiva.</li>
       </ul>
 
-      <h2 id="ia">5. Inteligencia artificial y otros servicios</h2>
+      <h2 id="ia">5. Inteligencia artificial, otros servicios y dónde están los datos</h2>
       <p>Cada comunidad decide si usa la IA. Si está activada, al cerrar un ticket el bot envía el texto de la conversación (nombres visibles y mensajes, sin archivos) a uno de estos proveedores para escribir un resumen y evaluar la atención del staff: <strong>Groq, Cerebras, OpenRouter, Google Gemini o Mistral</strong>.</p>
       <p>El bot prueba uno tras otro hasta que alguno responda. Cada proveedor trata los datos según su propia política de privacidad. <strong>Importante:</strong> los planes gratuitos de Google Gemini y Mistral pueden usar el texto recibido para mejorar sus modelos. Los Dueños de cada comunidad pueden apagar la IA por completo o elegir solo los proveedores que prefieran en <code>/setup</code>.</p>
       <p>Además:</p>
@@ -309,6 +313,8 @@ footer a:hover { color: var(--texto); }
         <li><strong>Discord</strong> guarda los mensajes, canales y archivos de los tickets, como cualquier otro mensaje de Discord.</li>
         <li><strong>El servicio de alojamiento</strong> donde funciona el bot guarda los archivos de datos descritos arriba.</li>
       </ul>
+      <h3>Transferencia fuera del Perú</h3>
+      <p>El desarrollador está en el Perú, pero el hosting del bot está en otro país (actualmente en Estados Unidos), y Discord y los proveedores de IA también procesan los datos fuera del Perú. Por eso los datos descritos en esta política salen del país donde vives. Al usar el bot, aceptas esa transferencia. Si no estás de acuerdo, no abras tickets con Euphory Ticket y pide al staff de tu comunidad otra forma de contacto.</p>
       <p>No se venden ni se alquilan datos a nadie, y no se usan para publicidad.</p>
 
       <h2 id="tiempo">6. Cuánto tiempo se guardan</h2>
@@ -316,9 +322,10 @@ footer a:hover { color: var(--texto); }
         <table>
           <thead><tr><th>Dato</th><th>Cuánto tiempo</th></tr></thead>
           <tbody>
+            <tr><td>Formularios a medio llenar</td><td>30 minutos como máximo; si no se envían, se borran</td></tr>
             <tr><td>Tickets abiertos</td><td>Hasta que se cierran</td></tr>
             <tr><td>Historial de tickets cerrados</td><td>90 días en uso; después pasa a archivos mensuales que se borran a los 5 años como máximo</td></tr>
-            <tr><td>Datos del jugador (plataforma, nick, versión)</td><td>Mientras exista la comunidad</td></tr>
+            <tr><td>Datos recordados de cada persona (plataforma, nick, versión, idioma)</td><td>Mientras exista la comunidad</td></tr>
             <tr><td>Historial de cambios de <code>/setup</code></td><td>Los últimos 200 cambios</td></tr>
             <tr><td>Lista negra</td><td>Hasta que el staff quita a la persona</td></tr>
           </tbody>
@@ -336,11 +343,12 @@ footer a:hover { color: var(--texto); }
       <ul>
         <li><strong>El staff de cada comunidad</strong> ve los tickets y el historial de su propia comunidad, según los permisos que los Dueños dieron a cada rango.</li>
         <li><strong>Los Dueños de la comunidad</strong> ven la configuración, el historial de cambios y pueden descargar copias de la configuración (sin las claves de IA).</li>
-        <li><strong>El desarrollador</strong> solo accede a los datos cuando hace falta para dar soporte, corregir un error o cumplir la ley.</li>
+        <li><strong>El desarrollador</strong> administra el hosting, así que <strong>técnicamente puede ver</strong> los archivos de datos de la sección 2. Además, el bot puede leer los canales donde tiene permiso, incluidos los canales de registros. El desarrollador se compromete a entrar a esos datos solo cuando hace falta para dar soporte, corregir un error, investigar un abuso o cumplir la ley; nunca para leer las conversaciones de una comunidad por curiosidad ni para compartirlas.</li>
+        <li><strong>El proveedor del hosting</strong> puede acceder a los archivos del servidor según su propia política, como pasa con cualquier servicio en la nube.</li>
       </ul>
       <p>Una comunidad nunca ve los datos de otra.</p>
       <h3>Seguridad</h3>
-      <p>Los datos se guardan en el servidor donde funciona el bot, sin acceso público. Las claves de IA nunca se muestran completas en Discord ni se incluyen en las copias de seguridad. Ningún sistema es 100 % seguro: si ocurre un problema que afecte tus datos, se avisará en el servidor de soporte.</p>
+      <p>Los datos se guardan en el servidor donde funciona el bot, sin acceso público. El acceso al hosting y la llave del bot (token) están protegidos con contraseña y verificación en dos pasos, y nunca se comparten. Las claves de IA nunca se muestran completas en Discord ni se incluyen en las copias de seguridad. Ningún sistema es 100 % seguro: si ocurre un problema que afecte tus datos, se avisará en el servidor de soporte.</p>
       <h3>Menores de edad</h3>
       <p>Discord exige tener al menos 13 años (o la edad mínima de tu país). Euphory Ticket sigue esa misma regla y no busca recoger datos de menores de esa edad. Si crees que se guardaron datos de alguien menor, escríbenos y los borraremos.</p>
 

@@ -211,6 +211,9 @@ footer a:hover { color: var(--texto); }
   background: linear-gradient(180deg, rgba(11, 11, 13, 0), var(--fondo) 92%); pointer-events: none; }
 @media (max-width: 860px) { .marco { margin: 0 auto; } }
 @media (max-width: 480px) { .menu > a { display: none; } }
+.rejilla { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .rejilla { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .rejilla { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -239,6 +242,7 @@ footer a:hover { color: var(--texto); }
           <li><a href="#uso">Uso permitido y prohibido</a></li>
           <li><a href="#ia">IA, claves propias y otros servicios</a></li>
           <li><a href="#disponibilidad">Disponibilidad, cambios y suspensión</a></li>
+          <li><a href="#marcas">Marcas y afiliación</a></li>
           <li><a href="#responsabilidad">Responsabilidad, propiedad y contacto</a></li>
         </ol>
       </nav>
@@ -259,6 +263,7 @@ footer a:hover { color: var(--texto); }
         <li>Deciden la configuración: quién es staff, qué se pregunta en los formularios, si se usa la IA y dónde se publican los registros.</li>
         <li>Son responsables de cómo su staff usa el bot y de lo que se escribe en sus tickets.</li>
         <li>Deben informar a sus miembros de que los tickets se registran (por ejemplo, en las reglas del servidor).</li>
+        <li>Deben informar también de que los datos de los tickets se procesan fuera del Perú (en el hosting del bot, en Discord y, si la activan, en los proveedores de IA), como explica la <a href="privacidad.html">Política de privacidad</a>.</li>
         <li>No deben pedir en los formularios datos sensibles innecesarios, como contraseñas, documentos de identidad o datos bancarios.</li>
         <li>Deben cuidar sus propias claves de IA si las añaden.</li>
       </ul>
@@ -285,7 +290,7 @@ footer a:hover { color: var(--texto); }
 
       <h2 id="disponibilidad">5. Disponibilidad, cambios y suspensión</h2>
       <ul>
-        <li>El bot es gratuito y se ofrece «tal cual». Se intenta tenerlo siempre en línea, pero puede haber caídas, mantenimiento o errores.</li>
+        <li>El bot es gratuito: todas sus funciones están disponibles sin pagar y no hay planes de pago. Se ofrece «tal cual». Se intenta tenerlo siempre en línea, pero puede haber caídas, mantenimiento o errores.</li>
         <li>Las funciones pueden cambiar, mejorar o retirarse con el tiempo. Los cambios importantes se anuncian en el servidor de soporte.</li>
         <li>Puede haber límites de uso para proteger el servicio, por ejemplo un número máximo de servidores o de categorías.</li>
         <li>El desarrollador puede <strong>suspender o retirar el bot</strong> de una comunidad que incumpla estos términos o las normas de Discord, con o sin aviso previo según la gravedad.</li>
@@ -293,7 +298,15 @@ footer a:hover { color: var(--texto); }
       <h3>Dejar de usar el bot</h3>
       <p>Los Dueños pueden eliminar su comunidad desde <code>/setup</code> (sus datos se borran al momento) o simplemente expulsar al bot (sus datos se borran a los 30 días). Si el bot dejara de ofrecerse por completo, se avisará con antelación en el servidor de soporte siempre que sea posible.</p>
 
-      <h2 id="responsabilidad">6. Responsabilidad, propiedad y contacto</h2>
+      <h2 id="marcas">6. Marcas y afiliación</h2>
+      <p>Euphory Ticket es un proyecto independiente. <strong>No está afiliado, patrocinado ni aprobado</strong> por Mojang Studios, Microsoft ni Discord Inc.</p>
+      <ul>
+        <li>Minecraft es una marca de Mojang Studios y Microsoft. Java, Bedrock y los nombres de launchers o mods (como Pojav, Fabric, Forge o NeoForge) son de sus respectivos dueños.</li>
+        <li>Discord es una marca de Discord Inc.</li>
+      </ul>
+      <p>Estos nombres se usan solo para describir con qué juegos y plataformas funciona el bot.</p>
+
+      <h2 id="responsabilidad">7. Responsabilidad, propiedad y contacto</h2>
       <h3>Sin garantías</h3>
       <p>En la medida que lo permita la ley, el bot se ofrece sin garantías de ningún tipo. El desarrollador no responde por:</p>
       <ul>

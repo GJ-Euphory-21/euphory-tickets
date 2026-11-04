@@ -211,6 +211,9 @@ footer a:hover { color: var(--texto); }
   background: linear-gradient(180deg, rgba(11, 11, 13, 0), var(--fondo) 92%); pointer-events: none; }
 @media (max-width: 860px) { .marco { margin: 0 auto; } }
 @media (max-width: 480px) { .menu > a { display: none; } }
+.rejilla { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .rejilla { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .rejilla { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -287,6 +290,11 @@ footer a:hover { color: var(--texto); }
             <h3>Secondary server</h3>
             <p>Link a second Discord server and receive the logs there, without cluttering your main server.</p>
           </div>
+          <div class="funcion">
+            <div class="icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></div>
+            <h3>Multiple languages</h3>
+            <p>English, Spanish, Portuguese and Chinese, or one you translate yourself. Each person picks their language in the panel and gets their ticket in it.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -331,7 +339,7 @@ footer a:hover { color: var(--texto); }
     <section class="llamada">
       <div class="contenedor">
         <h2>Ready to organize your support?</h2>
-        <p class="intro" style="margin-inline:auto">Free, in English, Spanish, Portuguese and Chinese (and any language you translate). It can help people in several languages at once: each person picks theirs in the panel. Questions? Drop by the support server.</p>
+        <p class="intro" style="margin-inline:auto">Free and in your language. Questions? Drop by the support server.</p>
         <div class="acciones">
           <a class="boton principal" href="https://discord.com/oauth2/authorize?client_id=1565609002463793242&amp;permissions=309506206736&amp;scope=bot%20applications.commands">Add to Discord</a>
           <a class="boton" href="https://discord.gg/Eh2tzxXeHK">Support server</a>
